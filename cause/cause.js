@@ -3,22 +3,22 @@ const reasons = [
   {
     text: "kamu tuh salah satu alasan terbesar aku semangat tiap hari. makasih udah hadir di hidup aku 💖",
     emoji: "🌟",
-    gif: "public/gif1.gif",
+    gif: "assets/gif1.gif",
   },
   {
     text: "semoga hari kamu selalu selow, banyak ketawa, dan jauh dari drama. you deserve peace 🌸",
     emoji: "💗",
-    gif: "public/gif2.gif",
+    gif: "assets/gif2.gif",
   },
   {
     text: "aku cuma mau kamu terus happy, dapet yang kamu kejar, dan gak pernah ngerasa sendirian ✨",
     emoji: "💕",
-    gif: "public/gif1.gif",
+    gif: "assets/gif1.gif",
   },
   {
     text: "tetap jadi kamu yang keren itu ya. positifnya selalu nular. semoga setahun ke depan makin luar biasa 🥳",
     emoji: "🌟",
-    gif: "public/gif2.gif",
+    gif: "assets/gif2.gif",
   },
 ];
 
