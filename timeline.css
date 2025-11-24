@@ -1,0 +1,647 @@
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPMori-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://assets.codepen.io/16327/PPMori-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-display: block;
+  font-family: Fraktion Mono;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPFraktionMono-Bold.woff)
+    format("woff");
+}
+
+:root {
+  /*   new */
+  --color-shockingly-green: #0ae448;
+  --color-just-black: #0e100f;
+  --color-surface-white: #fffce1;
+  --color-pink: #fec5fb;
+  --color-shockingly-pink: #f100cb;
+  --color-orangey: #ff8709;
+  --color-lilac: #9d95ff;
+  --color-lt-green: #abff84;
+  --color-blue: #00bae2;
+  --color-grey: gray;
+  --color-surface75: #bbbaa6;
+  --color-surface50: #7c7c6f;
+  --color-surface25: #42433d;
+  --gradient-macha: linear-gradient(
+    114.41deg,
+    var(--color-shockingly-green) 20.74%,
+    var(--color-lt-green) 65.5%
+  );
+  --gradient-orange-crush: linear-gradient(
+    111.45deg,
+    var(--color-orangey) 19.42%,
+    #f7bdf8 73.08%
+  );
+  --gradient-lipstick: linear-gradient(
+    165.72deg,
+    #f7bdf8 21.15%,
+    #cd237f 81.93%
+  );
+  --gradient-purple-haze: linear-gradient(
+    153.58deg,
+    #f7bdf8 32.25%,
+    #2f3cc0 92.68%
+  );
+  --gradient-skyfall: linear-gradient(
+    131.77deg,
+    #0a157a 30.82%,
+    #15bfe4 81.82%
+  );
+  --gradient-emerald-city: linear-gradient(
+    166.9deg,
+    var(--color-shockingly-green) 53.19%,
+    #0085d0 107.69%
+  );
+  --gradient-summer-fair: linear-gradient(
+    144.02deg,
+    var(--color-blue) 4.56%,
+    var(--color-pink) 72.98%
+  );
+  --color-core-green: #dfffd1;
+  --color-core-green-lt: #f3ffee;
+  --color-core-gradient: radial-gradient(
+    89.08% 84.62% at 16.54% 78.46%,
+    #fbfefa 0%,
+    #c9f6b4 39.58%,
+    #abff84 77.6%,
+    #2fee65 100%
+  );
+  --color-core-button-gradient: linear-gradient(
+    114.41deg,
+    #0ae448 20.74%,
+    #abff84 65.5%
+  );
+  --color-core-heading-gradient: linear-gradient(
+      180deg,
+      #d6ffc3 0%,
+      rgba(214, 255, 195, 0) 100%
+    ),
+    #f3ffee;
+  --color-core-intro-gradient: linear-gradient(
+      144.5deg,
+      #e8ffdd 65.09%,
+      #7dea7b 122.73%
+    ),
+    linear-gradient(311.31deg, #7ef89e 36.08%, #e5ffd9 106.98%);
+  --color-text-purple: #d2ceff;
+  --color-text-purple-lt: #dfdcff;
+  --color-text-gradient: radial-gradient(
+    129.03% 100% at 120.97% 81.45%,
+    #dfdcff 27.08%,
+    #a69eff 100%
+  );
+  --color-svg-tangerine: #ffe3c7;
+  --color-svg-tangerine-lt: #fff0e0;
+  --color-svg-gradient: radial-gradient(
+    70.77% 70.77% at 0% 70.77%,
+    #ffd9b0 0%,
+    #fd9f3b 80.73%,
+    #ff8709 100%
+  );
+  --color-svg-heading-gradient: linear-gradient(
+      180deg,
+      #ffbd77 0%,
+      rgba(254, 197, 251, 0) 100%
+    ),
+    #ffe4c7;
+  --color-ui-blue: #bef3fe;
+  --color-ui-blue-lt: #e1faff;
+  --color-ui-blue-codeblk: #f6feff;
+  --color-ui-text-gradient: linear-gradient(
+    168.89deg,
+    #fec5fb -21.3%,
+    #00bae2 89.88%
+  );
+  --color-ui-code-blocktext-gradient: linear-gradient(
+    142.91deg,
+    #cef6ff 18.75%,
+    #a6efff 54.93%
+  );
+  --color-ui-gradient: radial-gradient(
+    78.77% 78.77% at 71.71% 30.77%,
+    #f0fcff 0%,
+    #9bedff 67.21%,
+    #98ecff 76.04%,
+    #5be1ff 84.9%,
+    #00bae2 94.79%
+  );
+  --color-ui-gradient-background: linear-gradient(
+    137.1deg,
+    #ecfcff 27.5%,
+    #a6efff 94.09%
+  );
+  --color-ui-gradient-flip-background: radial-gradient(
+    140% 190% at 117.54% 131.12%,
+    #f0fcff 0%,
+    #9bedff 25.52%,
+    #98ecff 42.71%,
+    #5be1ff 60.94%,
+    #00bae2 94.79%
+  );
+  --color-scroll-pink: #ffd7fd;
+  --color-scroll-pink-lt: #ffe9fe;
+  --color-scroll-gradient: linear-gradient(
+    317.42deg,
+    #ffe9fe 10.4%,
+    #ff96f9 83.03%
+  );
+
+  --dark: var(--color-just-black);
+  --grey-dark: var(--color-surface-25);
+  --light: var(--color-surface-white);
+  --mid: var(--color-surface-50);
+  --grey: var(--color-grey);
+  --gray: var(--color-grey);
+  --green: var(--color-shockingly-green);
+  --green-dark: var(--color-shockingly-green);
+  --green-light: var(--color-lt-green);
+  --blue: var(--color-blue);
+  --purple: var(--color-lilac);
+  --red: var(--color-pink);
+  --orange: var(--color-orangey);
+  accent-color: var(--color-shockingly-green);
+}
+
+.panel.align-top {
+  align-items: flex-start;
+}
+
+.sub-margin-section {
+  margin-bottom: 5em;
+}
+
+.panel h1 {
+  /* font-size: 1.8em;
+  color: var(--color-surface-white);
+  font-weight: 300; */
+  /* margin: 0 auto; */
+}
+
+.ig-img {
+  break-inside: avoid;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+}
+
+.panel.description {
+  padding-bottom: 60px;
+}
+.panel p,
+.panel li {
+  /* color: var(--color-surface75); */
+  font-weight: 300;
+  /* text-align: left; */
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0.3em 0 1em 0;
+}
+.panel p strong,
+.panel li strong {
+  /* color: var(--color-surface75); */
+  font-weight: 300;
+}
+.panel p code,
+.panel li code {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+.panel li {
+  margin: 0;
+}
+
+.panel * {
+  z-index: 1;
+}
+
+.panel:before {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  background: linear-gradient(var(--color-surface-white), var(--color-surface-white))
+      padding-box,
+    var(--gradient) border-box;
+  border: 3px solid transparent;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.panel.blue {
+  --gradient: var(--color-ui-gradient);
+}
+.panel.orange {
+  --gradient: var(--gradient-orange-crush);
+}
+.panel.red {
+  --gradient: var(--gradient-lipstick);
+}
+.panel.purple {
+  --gradient: var(--gradient-purple-haze);
+}
+.panel.green {
+  /* background: var(--gradient-emerald-city); */
+  --gradient: var(--gradient-emerald-city);
+}
+
+.panel-last.green {
+  --gradient: var(--gradient-emerald-city);
+}
+
+.panel.grey,
+.panel.gray {
+  --gradient: #201f1f;
+}
+
+.panel.plain:before {
+  display: none;
+}
+
+/* .ppppaaading {
+  padding-left: 10px;
+  padding-right: 10px;
+} */
+
+.px {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.px-xl {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.py-xl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.py {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+html,
+body {
+  margin: 0;
+  /* height: 100%; */
+  -webkit-overflow-scrolling: touch;
+  /* overflow-scrolling: touch; */
+}
+
+.panel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  flex-direction: column;
+  /* text-align: center; */
+  position: relative;
+  box-sizing: border-box;
+  /* padding: 10px; */
+  /* color: var(--color-surface-white); */
+  background-color: var(--color-surface-white);
+}
+
+.section-title {
+  margin-bottom: 100px;
+  font-size: 2.5rem;
+}
+
+.panel-last {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  color: var(--color-surface-white);
+  background-color: var(--color-just-black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.horizontal-masonry {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  /* width: max-content; */
+}
+
+.masonry-img {
+  flex-shrink: 0;
+}
+
+#hori-section {
+  overflow: hidden;
+}
+
+.svg-container {
+  position: absolute;
+  width: 3000px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball {
+  fill: black;
+  visibility: hidden;
+}
+
+.horizontal-wrapper {
+  height: 100vh;
+  width: 3000px;
+  /* background: #000; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* .theLine {
+    stroke-dasharray: 50px;
+} */
+
+.title-physic {
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 3rem;
+  right: 0;
+  top: 1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.container-physic {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*   max-width: 90vh; */
+  /*   max-height: 90vw; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 9px;
+  background: #0e100f;
+}
+
+.wrapper-physic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.cannon {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.flair-container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flair {
+  width: 50px;
+  height: 50px;
+  background-image: url("https://assets.codepen.io/16327/flair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flair-bullet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  will-change: transform;
+  opacity: 0;
+}
+
+.hbd-section {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #ffe8f3, #ffd0e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 60px;
+}
+
+.balloon {
+  position: absolute;
+  font-size: 70px;
+}
+
+.balloon-left {
+  left: 10%;
+  bottom: -100px;
+}
+
+.balloon-right {
+  right: 10%;
+  bottom: -120px;
+}
+
+.cake-container {
+  text-align: center;
+  transform: translateY(20px);
+}
+
+.hbd-text {
+  font-size: 32px;
+  margin-top: 20px;
+  color: #ff2d75;
+  font-weight: bold;
+}
+
+.flair--2 {
+  background-image: url("https://assets.codepen.io/16327/flair-2.png");
+}
+
+.flair--3 {
+  background-image: url("https://assets.codepen.io/16327/flair-3.png");
+}
+
+.flair--4 {
+  background-image: url("https://assets.codepen.io/16327/flair-4.png");
+}
+
+.flair--5 {
+  background-image: url("https://assets.codepen.io/16327/flair-5.png");
+}
+
+.flair--6 {
+  background-image: url("https://assets.codepen.io/16327/flair-6.png");
+}
+
+.flair--7 {
+  background-image: url("https://assets.codepen.io/16327/flair-7.png");
+}
+
+.flair--8 {
+  background-image: url("https://assets.codepen.io/16327/flair-8.png");
+}
+
+.flair--9 {
+  background-image: url("https://assets.codepen.io/16327/flair-9.png");
+}
+
+.flair--10 {
+  background-image: url("https://assets.codepen.io/16327/flair-10.png");
+}
+
+.flair--11 {
+  background-image: url("https://assets.codepen.io/16327/flair-11.png");
+}
+
+.flair--12 {
+  background-image: url("https://assets.codepen.io/16327/flair-12.png");
+}
+
+.flair--13 {
+  background-image: url("https://assets.codepen.io/16327/flair-13.png");
+}
+
+.flair--14 {
+  background-image: url("https://assets.codepen.io/16327/flair-14.png");
+}
+
+.flair--15 {
+  background-image: url("https://assets.codepen.io/16327/flair-15.png");
+}
+
+.flair--16 {
+  background-image: url("https://assets.codepen.io/16327/flair-16.png");
+}
+
+.flair--17 {
+  background-image: url("https://assets.codepen.io/16327/flair-17.png");
+}
+
+.flair--18 {
+  background-image: url("https://assets.codepen.io/16327/flair-18.png");
+}
+
+.flair--19 {
+  background-image: url("https://assets.codepen.io/16327/flair-19.png");
+}
+
+.flair--20 {
+  background-image: url("https://assets.codepen.io/16327/flair-20.png");
+}
+
+.flair--21 {
+  background-image: url("https://assets.codepen.io/16327/flair-21.png");
+}
+
+.flair--22 {
+  background-image: url("https://assets.codepen.io/16327/flair-22.png");
+}
+
+.flair--23 {
+  background-image: url("https://assets.codepen.io/16327/flair-23.png");
+}
+
+.flair--24 {
+  background-image: url("https://assets.codepen.io/16327/flair-24.png");
+}
+
+.flair--25 {
+  background-image: url("https://assets.codepen.io/16327/flair-25.png");
+}
+
+.flair--26 {
+  background-image: url("https://assets.codepen.io/16327/flair-26.png");
+}
+
+.flair--27 {
+  background-image: url("https://assets.codepen.io/16327/flair-27.png");
+}
+
+.flair--28 {
+  background-image: url("https://assets.codepen.io/16327/flair-28.png");
+}
+
+.flair--29 {
+  background-image: url("https://assets.codepen.io/16327/flair-29.png");
+}
+
+.flair--30 {
+  background-image: url("https://assets.codepen.io/16327/flair-30.png");
+}
+
+.flair--31 {
+  background-image: url("https://assets.codepen.io/16327/flair-31.png");
+}
+
+.flair--32 {
+  background-image: url("https://assets.codepen.io/16327/flair-32.png");
+}
+
+.flair--33 {
+  background-image: url("https://assets.codepen.io/16327/flair-33.png");
+}
+
+.flair--34 {
+  background-image: url("https://assets.codepen.io/16327/flair-34.png");
+}
+
+.flair--35 {
+  background-image: url("https://assets.codepen.io/16327/flair-35.png");
+}
